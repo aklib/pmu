@@ -1,0 +1,138 @@
+<?php
+/**
+ * File post.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+$this->addTranslationFile('price', __DIR__);
+
+$lang = $this->getLanguage();
+
+//  blog top start
+
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('prices.title', 'price'),
+    'key'   => 'prices'
+]);
+//blog top end
+
+?>
+
+
+<div class="ds_wrapper  portfolio_slider_sec">
+    <div class="container">
+        <div class="row content">
+            <!-- left pricing table 1 start -->
+            <div class="col-sm-6  col-xs-12 col-lg-6">
+                <div class="prices_section">
+                    <h2 class="block_title">
+                        <?= $this->translate('permanent.makeup.eye') ?>
+                    </h2>
+                    <ul class="price_ul">
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.eye.name1', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.eye.amount1', 'price') ?>
+                            </div>
+                        </li>
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.eye.name2', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.eye.amount2', 'price') ?>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- left pricing table 1 end -->
+            <!-- right pricing table 2 start -->
+            <div class="col-sm-6  col-xs-12 col-lg-6">
+                <div class="prices_section">
+                    <h2 class="block_title">
+                        <?= $this->translate('permanent.makeup.eyebrow') ?>
+                    </h2>
+                    <ul class="price_ul">
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.eyebrow.name1', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.eyebrow.amount1', 'price') ?>
+                            </div>
+                        </li>
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.eyebrow.name2', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.eyebrow.amount2', 'price') ?>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- right pricing table 2 end -->
+            <!-- left pricing table 3 start -->
+            <div class="col-sm-6  col-xs-12 col-lg-6">
+                <div class="prices_section">
+                    <h2 class="block_title">
+                        <?= $this->translate('permanent.makeup.lips') ?>
+                    </h2>
+                    <ul class="price_ul">
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.lips.name1', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.lips.amount1', 'price') ?>
+                            </div>
+                        </li>
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.lips.name2', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.lips.amount2', 'price') ?>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- left pricing table 3 end -->
+            <!-- right pricing table 4 start -->
+            <div class="col-sm-6  col-xs-12 col-lg-6">
+                <div class="prices_section">
+                    <h2 class="block_title">
+                        <?= $this->translate('permanent.makeup.removal') ?>
+                    </h2>
+                    <ul class="price_ul">
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.removal.name1', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.removal.amount1', 'price') ?>
+                            </div>
+                        </li>
+                        <li class="price_list">
+                            <div class="price_title">
+                                <?= $this->translate('price.removal.name2', 'price') ?>
+                            </div>
+                            <div class="price_right">
+                                <?= $this->translate('price.removal.amount2', 'price') ?>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- right pricing table 4 end -->
+        </div>
+    </div>
+</div>
+
