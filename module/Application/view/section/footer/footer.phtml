@@ -7,6 +7,7 @@
  */
 
 $this->addTranslationFile('footer', __DIR__);
+$lang = $this->getLanguage();
 ?>
 <footer>
     <div class="ds_wrapper footer_section">
@@ -20,43 +21,13 @@ $this->addTranslationFile('footer', __DIR__);
                     <div class="photo_tiles">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'gallery-item'], ['query' => ['id' => 1]]) ?>">
+                                    <img alt="" src="/images/item1/dummy_84x84.jpg">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'gallery-item'], ['query' => ['id' => 2]]) ?>">
+                                    <img alt="" src="/images/item2/dummy_84x84.jpg">
                                 </a>
                             </li>
                         </ul>

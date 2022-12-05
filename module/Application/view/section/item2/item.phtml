@@ -7,7 +7,7 @@
  */
 
 
-$this->addTranslationFile('item1', __DIR__);
+$this->addTranslationFile('item2', __DIR__);
 
 // sidebar populate posts translations
 $this->addTranslationFile('gallery', dirname(__DIR__) . '/gallery');
@@ -16,7 +16,7 @@ $lang = $this->getLanguage();
 $galleryUrl = $this->url('home', ['language' => $lang, 'action' => 'gallery']);
 
 echo $this->render('section/_default/top', [
-    'title' => $this->translate('item.title', 'item1'),
+    'title' => $this->translate('item.title', 'item2'),
     'key'   => 'item'
 ]);
 ?>
@@ -31,19 +31,19 @@ echo $this->render('section/_default/top', [
                     <div class="slider_main">
                         <ul class="slider_bx">
                             <li>
-                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive"/>
+                                <img alt="portfolio" src="/images/item2/dummy_760x460.png" class="img-responsive"/>
                             </li>
                             <li>
-                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive"/>
+                                <img alt="portfolio" src="/images/item2/dummy_760x460.png" class="img-responsive"/>
                             </li>
                             <li>
-                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive"/>
+                                <img alt="portfolio" src="/images/item2/dummy_760x460.png" class="img-responsive"/>
                             </li>
                             <li>
-                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive"/>
+                                <img alt="portfolio" src="/images/item2/dummy_760x460.png" class="img-responsive"/>
                             </li>
                             <li>
-                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive"/>
+                                <img alt="portfolio" src="/images/item2/dummy_760x460.png" class="img-responsive"/>
                             </li>
                         </ul>
                     </div>
@@ -55,16 +55,16 @@ echo $this->render('section/_default/top', [
                     <div class="ds_projectdescription full_width">
                         <div class="topLeftBlog">
                             <h2 class="title" style="margin-top: 0">
-                                <?= $this->translate('item.title', 'item1') ?>
+                                <?= $this->translate('item.title', 'item2') ?>
                             </h2>
                         </div>
                         <div class="ds_blogContent full_width">
                             <div class="ds_blog1content full_width">
                                 <p>
-                                    <?= $this->translate('item.text1', 'item1') ?>
+                                    <?= $this->translate('item.text1', 'item2') ?>
                                 </p>
                                 <p>
-                                    <?= $this->translate('item.text2', 'item1') ?>
+                                    <?= $this->translate('item.text2', 'item2') ?>
                                 </p>
                             </div>
                             <a class="blogmore" href="<?= $galleryUrl ?>">
