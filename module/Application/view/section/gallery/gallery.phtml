@@ -1,0 +1,71 @@
+<?php /** @noinspection ALL */
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpUndefinedMethodInspection */
+/**
+ * File navigation.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ *
+ */
+
+$this->addTranslationFile('gallery', __DIR__);
+
+$lang = $this->getLanguage();
+
+//  gallery top start
+
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('gallery.title', 'gallery'),
+    'key'   => 'gallery'
+]);
+
+//  gallery top start
+?>
+
+
+<div class="ds_wrapper  portfolio_slider_sec">
+    <div class="container">
+        <div class="row">
+            <!-- portfolio tabs start-->
+            <?= $this->render('section/_default/filter'); ?>
+            <!-- portfolio tabs end-->
+            <div class="full_width" id="porfolio_filter">
+                <div class="clearfix">
+
+                    <!-- start gallery items -->
+                    <div class="full_width gallery_page" id="porfolio_filter">
+
+                        <?php
+                        // =========== gallery item 1
+
+                        echo $this->render('section/_default/gallery-item-meta', [
+                            'id'     => 1,
+                            'filter' => 'lips',
+                            'image'  => '/images/item1/dummy_380x230.png',
+                            'title'  => $this->translate('item1.title', 'gallery'),
+                            'topic'  => $this->translate('item1.topic', 'gallery'),
+                        ]);
+                        // =========== gallery item 2
+
+                        echo $this->render('section/_default/gallery-item-meta', [
+                            'id'     => 2,
+                            'filter' => 'eyebrows',
+                            'image'  => '/images/item2/dummy_380x230.png',
+                            'title'  => $this->translate('item2.title', 'gallery'),
+                            'topic'  => $this->translate('item2.topic', 'gallery'),
+                        ]);
+                        // =========== gallery item next
+
+                        ?>
+                    </div>
+                </div>
+                <!-- gallery -->
+            </div>
+        </div>
+    </div>
+</div>

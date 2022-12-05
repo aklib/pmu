@@ -1,0 +1,69 @@
+<?php
+/**
+ * File post.phtml
+ *
+ * since: 04.12.2022
+ * author: alexej@kisselev.de
+ */
+
+$lang = $this->getLanguage();
+$id = $this->id;
+$title = $this->title ?? '';
+$topic = $this->topic ?? '';
+$image = $this->image ?? '';
+$date = $this->date ?? '';
+
+$blogUrl = $this->url('home', ['language' => $lang, 'action' => 'blog']);
+?>
+
+<!-- blog category  start-->
+<div class="ds_blogpostcategory full_width">
+    <div class="blogimg full_width">
+        <a href="#">
+            <img alt="" src="/images/post1/dummy_760x460.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="ds_entry full_width">
+        <div class="ds_meta">
+            <div class="topLeftBlog">
+                <div class="ds_post-meta">
+                    <div class="post-icon">
+                    </div>
+                    <span>
+                         <?= $date ?>
+                    </span>
+
+                    <a href="#">
+                        <?= $topic ?>
+                    </a>
+
+                </div>
+                <h2 class="title">
+                    <a href="#" title="trim">
+                        <?= $title ?>
+                    </a>
+                </h2>
+            </div>
+            <div class="ds_blogContent full_width">
+                <div class="ds_blog1content full_width">
+                    <?php for ($i = 1; true; $i++):
+                        $key = 'post.text' . $i;
+                        $text = $this->translate($key, 'post' . $id);
+                        if($text === $key){
+                            break;
+                        }
+                        ?>
+
+                        <p>
+                            <?= $text ?>
+                        </p>
+                    <?php endfor; ?>
+                </div>
+                <a class="blogmore" href="<?= $blogUrl ?>">
+                    &laquo; <?= $this->translate('button.back.title') ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- blog category end -->

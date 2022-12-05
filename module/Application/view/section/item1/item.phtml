@@ -1,0 +1,150 @@
+<?php
+/**
+ * File item.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+
+$this->addTranslationFile('item1', __DIR__);
+
+// sidebar populate posts translations
+$this->addTranslationFile('gallery', dirname(__DIR__) . '/gallery');
+
+$lang = $this->getLanguage();
+$itemUrl = $this->url('home', ['language' => $lang, 'action' => 'item']);
+
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('item.title', 'item1'),
+    'key'   => 'item'
+]);
+?>
+
+
+<div class="ds_wrapper  portfolio_slider_sec">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <!-- category slider start-->
+                <div class="col-sm-7 col-lg-7 col-md-7">
+                    <div class="slider_main">
+                        <ul class="slider_bx">
+                            <li>
+                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive" />
+                            </li>
+                            <li>
+                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive" />
+                            </li>
+                            <li>
+                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive" />
+                            </li>
+                            <li>
+                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive" />
+                            </li>
+                            <li>
+                                <img alt="portfolio" src="/images/item1/dummy_760x460.png" class="img-responsive" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- category slier end -->
+                <!-- right side description -->
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="ds_projectdescription full_width">
+                        <div class="date_comment full_width">
+                            <div class="project_section">
+                                <i class="fa fa-user">
+                                </i>Client
+                                <span class="ds_author">
+											John Doe
+										</span>
+                            </div>
+                            <div class="project_section">
+                                <i class="fa fa-calendar">
+                                </i>Styling Date
+                                <span class="posted-date port">
+											Styling completed on March 1st, 2017
+										</span>
+                            </div>
+                            <div class="project_section">
+                                <i class="fa fa-user">
+                                </i>Hair Stylist
+                                <span class="ds_author">
+                                    John Barbista
+                                </span>
+                            </div>
+
+
+                        </div>
+                        <div class="ds_custom_images full_width">
+                            <a class="addthis_button_facebook" title="Facebook" href="#">
+                                <i class="fa fa-facebook">
+                                </i>
+                            </a>
+                            <a class="addthis_button_twitter " title="Tweet" href="#">
+                                <i class="fa fa-twitter">
+                                </i>
+                            </a>
+                            <a class="addthis_button_pinterest_share" target="_blank" title="Pinterest" href="#">
+                                <i class="fa fa-pinterest">
+                                </i>
+                            </a>
+                            <a class="addthis_button_email " target="_blank" title="Email" href="#">
+                                <i class="fa fa-envelope">
+                                </i>
+                            </a>
+                            <a class="addthis_button_more" target="_blank" title="View more services" href="#">
+                                <i class="fa fa-plus">
+                                </i>
+                            </a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!-- right side description -->
+                <!-- gallery -->
+                <div class="col-lg-12 col-sm-12">
+                    <div class="detail_gallery full_width">
+                        <ul class="gallery clearfix">
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images/item1/dummy_760x460.png" data-gal="prettyPhoto[gallery1]">
+                                    <img alt="" src="/images/item1/dummy_380x230.png" title="portfolio2" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- gallery -->
+            </div>
+        </div>
+    </div>
+</div>
+

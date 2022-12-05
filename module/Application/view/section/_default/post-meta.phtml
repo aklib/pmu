@@ -1,0 +1,39 @@
+<?php
+/**
+ * File post.phtml
+ *
+ * since: 04.12.2022
+ * author: alexej@kisselev.de
+ */
+
+$lang = $this->getLanguage();
+$id = $this->id;
+$title = $this->title ?? '';
+$topic = $this->topic ?? '';
+$image = $this->image ?? '';
+$key = $this->filter ?? '';
+?>
+
+
+<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mix <?= $key ?>" data-myorder="<?= $id ?>">
+    <div class="blog_wrapper full_width">
+        <?php
+        $slug = str_replace(' ', '_', mb_strtolower($title));
+        $url = $this->url('home', ['language' => $lang, 'action' => 'post', 'slug' => $slug], ['query' => ['id' => $id]]);
+        ?>
+        <a href="<?= $url ?>">
+            <img alt="" src="<?= $image ?>" class="img-responsive">
+        </a>
+        <div class="ds_post_meta">
+            <a href="<?= $url ?>">
+                <div class="post_meta_title">
+                    <?= $title ?>
+                </div>
+            </a>
+            <div class="home_portfolio_categories ">
+                <?= $topic ?>
+            </div>
+        </div>
+    </div>
+</div>
+

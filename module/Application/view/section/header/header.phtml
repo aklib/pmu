@@ -1,0 +1,149 @@
+<?php /** @noinspection ALL */
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpUndefinedMethodInspection */
+/**
+ * File navigation.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ *
+ */
+
+use Laminas\I18n\Translator\Translator;
+use Laminas\I18n\Translator\Loader\PhpArray;
+
+$this->addTranslationFile('header', __DIR__);
+$lang = $this->getLanguage();
+$action = $this->params('action');
+$class = ' class="current_page_item"';
+
+?>
+<header class="header_main header_home">
+    <div class="ds_wrapper wrapper_top">
+        <div class="container">
+            <div class="row">
+                <div class="notification_bar">
+                    <div class="col-sm-9 col-lg-9">
+                        <div class="ds_top_notification">
+                            <div class="br_notification_content">
+                                <i class="fa fa-mobile">
+                                </i>
+                                <div class="notification_text">
+                                    <?= $this->translate('phone.number1') ?>&nbsp;|&nbsp;<?= $this->translate('phone.number2') ?>
+                                </div>
+                            </div>
+                            <div class="br_notification_content">
+                                <i class="fa fa-map-marker">
+                                </i>
+                                <div class="notification_text">
+                                    <?= $this->translate('my.address') ?>
+                                </div>
+                            </div>
+                            <div class="br_notification_content">
+                                <i class="fa fa-send">
+                                </i>
+                                <div class="notification_text">
+                                    <a href="mailto:info@barber.com">
+                                        <?= $this->translate('my.email') ?>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-lg-3">
+                        <div class="ds_social_notification">
+                            <a target="_blank" href="#">
+                                <i class="fa fa-odnoklassniki">
+                                </i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fa fa-instagram">
+                                </i>
+                            </a>
+                            <a href="<?= $this->url('home', ['language' => 'ru', 'action' => $action]) ?>" style="margin-left: 1em;font-size: 13px"<?= $lang !== 'ru' ? '' : $class ?>>
+                                ru
+                            </a>
+                            <a href="<?= $this->url('home', ['language' => 'en', 'action' => $action]) ?>" style="font-size: 13px"<?= $lang !== 'en' ? '' : $class ?>>
+                                en
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header top section -->
+    <!-- header menu section -->
+    <div class="ds_wrapper wrapper_nav">
+        <div class="container">
+            <div class="row">
+                <!-- navbar toggle start -->
+                <div class="navbar-header pull-right">
+                    <button type="button" class="navbar_toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fa fa-list-ul">
+                        </i>
+                    </button>
+                </div>
+                <!-- navbar toggle end-->
+                <div class="col-sm-2 col-lg-2 col-md-2 col-xs-5">
+                    <div class="ds_logo_left">
+                        <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'index']) ?>">
+                            <img alt="" src="/images/logo-img.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-8 col-md-8 col-xs-12 ds_navigation_menu">
+                    <!-- navbar_collapse -->
+                    <div class="navbar_collapse">
+                        <nav>
+                            <ul class="menu">
+                                <li<?= $action === 'index' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'index']) ?>">
+                                        <?= $this->translate('nav.home', 'header') ?>
+                                    </a>
+                                </li>
+                                <li<?= $action === 'blog' || $action === 'post' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'blog']) ?>">
+                                        <?= $this->translate('nav.blog', 'header') ?>
+                                    </a>
+                                </li>
+                                <li<?= $action === 'gallery' || $action === 'gallery-item' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'gallery']) ?>">
+                                        <?= $this->translate('nav.gallery', 'header') ?>
+                                    </a>
+                                </li>
+                                <li<?= $action === 'services' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'services']) ?>">
+                                        <?= $this->translate('nav.services', 'header') ?>
+                                    </a>
+                                </li>
+                                <li<?= $action === 'prices' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'prices']) ?>">
+                                        <?= $this->translate('nav.prices', 'header') ?>
+                                    </a>
+                                </li>
+                                <li<?= $action === 'contact' ? $class : '' ?>>
+                                    <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'contact']) ?>">
+                                        <?= $this->translate('nav.contact', 'header') ?>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- navbar_collapse -->
+                </div>
+                <div class="pull-right hidden-xs" id="appointment_btn">
+                    <div class="appointment_btn">
+                        <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'contact']) ?>">
+                            <?= $this->translate('nav.booking.button', 'header') ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

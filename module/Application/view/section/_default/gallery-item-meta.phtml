@@ -1,0 +1,42 @@
+<?php /** @noinspection ALL */
+/**
+ * File post.phtml
+ *
+ * since: 04.12.2022
+ * author: alexej@kisselev.de
+ */
+
+$lang = $this->getLanguage();
+$id = $this->id;
+$title = $this->title ?? '';
+$topic = $this->topic ?? '';
+$image = $this->image ?? '';
+$key = $this->filter ?? '';
+?>
+
+<!-- Ractangle start -->
+<div class="col-lg-4 col-md-4 col-xs-4 ds_ractangle mix <?= $key ?>" data-myorder="<?= $id ?>">
+    <div class="ds_item">
+        <img alt="" src="<?= $image ?>" class="img-responsive">
+        <!-- overlay -->
+        <?php
+        $slug = str_replace(' ', '_', mb_strtolower($title));
+        $url = $this->url('home', ['language' => $lang, 'action' => 'gallery-item', 'slug' => $slug], ['query' => ['id' => $id]]);
+        ?>
+        <a href="<?= $url ?>">
+            <div class="ract_overlay">
+                <div class="rect_description">
+                    <h3>
+                        <?= $title ?>
+                    </h3>
+                    <div class="port_catagory">
+                        <?= $topic ?>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- overlay -->
+    </div>
+</div>
+<!-- Ractangle end -->
+

@@ -1,0 +1,136 @@
+<?php /** @noinspection ALL */
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpUndefinedMethodInspection */
+/**
+ * File navigation.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ *
+ */
+
+$this->addTranslationFile('services', __DIR__);
+
+?>
+<div class="ds_wrapper section_accordian">
+    <div class="container">
+        <div class="row">
+            <!--accordion start-->
+            <div class="col-sm-6 col-lg-6 accordian_left">
+                <h2 class="block_title"> <?= $this->translate('section.name', 'services') ?></h2>
+                <div class="bs-example">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel_default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        <?= $this->translate('service1.name', 'services') ?>
+                                        <i class="indicator glyphicon glyphicon-chevron-down"></i>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <!--  panel body start -->
+                                <div class="panel-body panel_body">
+                                    <p class="services_hide">
+                                        <?= $this->translate('service1.text1', 'services') ?>
+                                    </p>
+                                    <h4 class="services-hide">
+                                        CLASSIC -
+                                        <span class="Doller_c">
+													$49
+												</span>
+                                    </h4>
+                                </div>
+                                <!--  panel body end-->
+                            </div>
+                        </div>
+                        <div class="panel panel_default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true">
+                                        <?= $this->translate('service2.name', 'services') ?>
+                                        <i class="indicator glyphicon glyphicon-chevron-down"></i>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <!--  panel body start -->
+                                <div class="panel-body panel_body">
+                                    <p class="services_hide">
+                                        <?= $this->translate('service2.text1', 'services') ?>
+                                    </p>
+                                </div>
+                                <!--  panel body end-->
+                            </div>
+                        </div>
+                        <div class="panel panel_default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                        <?= $this->translate('service3.name', 'services') ?>
+                                        <i class="indicator glyphicon glyphicon-chevron-down"></i>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <!--  panel body start -->
+                                <div class="panel-body panel_body">
+
+                                    <p class="services_hide">
+                                        <?= $this->translate('service3.text1', 'services') ?>
+                                    </p>
+                                    <p class="services_hide">
+                                        <?= $this->translate('service3.text2', 'services') ?>
+                                    </p>
+                                </div>
+                                <!--  panel body end-->
+                            </div>
+                        </div>
+                        <div class="panel panel_default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                        <?= $this->translate('service4.name', 'services') ?>
+                                        <i class="indicator glyphicon glyphicon-chevron-down"></i>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <!--  panel body start -->
+                                <div class="panel-body panel_body">
+                                    <p class="services_hide">
+                                        <?= $this->translate('service4.text1', 'services') ?>
+                                    </p>
+                                </div>
+                                <!--  panel body end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--accordion end-->
+            <div class="col-sm-6 col-lg-6">
+                <h2 class="block_title">
+                    <?= $this->translate('about.title', 'services') ?>
+                </h2>
+                <div class="right_side_mdl">
+                    <p>
+                        <?= $this->translate('about.text1', 'services') ?>
+                    </p>
+                    <img alt="" src="/images/services/dummy_371x205.png" class="img-responsive hair_cut">
+                    <img alt="" src="/images/services/dummy_180x205.png" class="img-responsive saving_img">
+                    <p>
+                        <strong>
+                            <?= $this->translate('booking.text') ?>:&nbsp;<?= $this->translate('phone.number1') ?>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

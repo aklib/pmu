@@ -1,0 +1,65 @@
+<?php /** @noinspection ALL */
+/**
+ * File blog.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+$this->addTranslationFile('blog', __DIR__);
+
+$lang = $this->getLanguage();
+
+//  blog top start
+
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('blog.title', 'blog'),
+    'key'   => 'blog'
+]);
+//blog top end
+
+?>
+<!--  posts list -->
+<div class="ds_wrapper  portfolio_slider_sec bg_whitesmoke">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <!-- portfolio tabs start-->
+                <?= $this->render('section/_default/filter'); ?>
+                <!-- portfolio tabs end-->
+                <!-- portfolio content start -->
+                <div class="full_width section_port four_column" id="porfolio_filter">
+                    <?php
+                    // =========== post 1
+                    $this->addTranslationFile('post1', dirname(__DIR__) . '/post1');
+                    echo $this->render('section/_default/post-meta', [
+                            'id'     => 1,
+                            'filter' => 'lips',
+                            'image'  => '/images/post1/dummy_380x230.png',
+                            'title'  => $this->translate('post.title', 'post1'),
+                            'topic'  => $this->translate('post.topic', 'post1'),
+                        ]);
+                    // =========== post 2
+                    $this->addTranslationFile('post2', dirname(__DIR__) . '/post2');
+                    echo $this->render('section/_default/post-meta', [
+                            'id'     => 2,
+                            'filter' => 'eyebrows',
+                            'image'  => '/images/post2/dummy_380x230.png',
+                            'title'  => $this->translate('post.title', 'post2'),
+                            'topic'  => $this->translate('post.topic', 'post2'),
+                        ]);
+                    // =========== post next
+
+
+                    ?>
+                    <!-- eo post -->
+                </div>
+                <!-- portfolio content end -->
+                <!--  pagination -->
+                <!--  will be implemented on demand -->
+                <!--  pagination -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--  posts list end -->

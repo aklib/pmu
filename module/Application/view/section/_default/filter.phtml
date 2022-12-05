@@ -1,0 +1,48 @@
+<?php
+/**
+ * File filter.phtml
+ *
+ * since: 04.12.2022
+ * author: alexej@kisselev.de
+ */
+?>
+
+<div class="porfolio_part full_width">
+    <ul class="blog_ul">
+        <li class="active">
+            <a href="#" class="filter current" data-filter="all">
+                <span>
+                    <?= $this->translate('filter.all') ?>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter" data-filter=".eyebrows">
+                <span>
+                     <?= $this->translate('filter.eyebrows') ?>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter" data-filter=".eyelids">
+                <span>
+                     <?= $this->translate('filter.eyelids',) ?>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter" data-filter=".lips">
+                 <span>
+                     <?= $this->translate('filter.lips') ?>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="filter" data-filter=".removal">
+                  <span>
+                     <?= $this->translate('filter.removal') ?>
+                  </span>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,132 @@
+<?php
+/**
+ * File footer.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+$this->addTranslationFile('footer', __DIR__);
+?>
+<footer>
+    <div class="ds_wrapper footer_section">
+        <div class="container">
+            <div class="row">
+                <!-- instagram-->
+                <div class="col-sm-4 col-lg-4">
+                    <h4 class="widget-title">
+                        <?= $this->translate('example.title', 'footer') ?>
+                    </h4>
+                    <div class="photo_tiles">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="/images/footer/dummy_84x84.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--  instagram end-->
+                <!-- about us-->
+                <div class="col-sm-4 col-lg-4">
+                    <h4 class="widget-title">
+                        <?= $this->translate('about.title', 'footer') ?>
+                    </h4>
+                    <div class="textwidget">
+                        <p>
+                            <?= $this->translate('about.text', 'footer') ?>
+                        </p>
+                        <ul class="contact">
+                            <li>
+                                <i class="fa fa-phone">
+                                </i>
+                                <?= $this->translate('phone.number1') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone">
+                                </i>
+                                <?= $this->translate('phone.number2') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope">
+                                </i>
+                                <?= $this->translate('my.email') ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--  about us end-->
+                <!-- opening time-->
+                <div class="col-sm-4 col-lg-4">
+                    <h4 class="widget-title">
+                        <?= $this->translate('opening.times.title', 'footer') ?>
+                    </h4>
+                    <div class="textwidget">
+                        <ul class="opening_times">
+                            <li>
+                                <span class="day">
+                                        <?= $this->translate('opening.times.text', 'footer') ?>
+                                </span>
+                                <span class="time">
+                                    <?= $this->translate('opening.times.time', 'footer') ?>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--  opening time end-->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- copyright_footer -->
+<div class="ds_wrapper copyright_footer">
+    <div class="container">
+        <div class="row">
+            <div class="copyright_area">
+                <p>
+                    <?= $this->translate('my.title') ?>
+                </p>
+                <div id="copyright">
+                    <?= $this->translate('my.name') ?> &copy; 2021 - <?= date('Y') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

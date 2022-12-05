@@ -1,0 +1,42 @@
+<?php
+/**
+ * File footer.phtml
+ *
+ * The slide starts with element <li>
+ *  - the image <img src="/images/slider/slide1.jpg".....
+ *  - the first title
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ */
+//$this->addTranslationFile('slider', __DIR__);
+?>
+<div class="ds_wrapper wrapper_slider" style="background-color: #141414">
+    <!-- SLIDER -->
+    <article class="content">
+        <div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="layer-animations" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+            <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+            <div id="rev_slider_116_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+                <ul>
+                    <?= $this->render('/section/slide1/slide') ?>
+                    <!-- SLIDE  -->
+                    <?= $this->render('/section/slide2/slide') ?>
+                    <!-- SLIDE  -->
+                    <?= $this->render('/section/slide3/slide') ?>
+                    <!-- SLIDE  -->
+                    <?= $this->render('/section/slide4/slide') ?>
+                    <!-- SLIDE  -->
+                </ul>
+                <div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);">
+                </div>
+            </div>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+    </article>
+
+    <!-- section end -->
+    <!-- SLIDER -->
+</div>

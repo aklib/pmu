@@ -1,0 +1,99 @@
+<?php
+/**
+ * File post.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+$this->addTranslationFile('blog', dirname(__DIR__) . '/blog');
+$this->addTranslationFile('post1', __DIR__);
+
+$lang = $this->getLanguage();
+
+//  blog top start
+
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('post.title', 'post1'),
+    'key'   => 'post'
+]);
+//blog top end
+?>
+
+<div class="ds_wrapper  portfolio_slider_sec">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <!-- category slider start-->
+                <div class="col-sm-8 col-lg-8 col-md-8">
+                    <!-- blog category  start-->
+                    <?php
+                    // =========== post 1
+
+                    echo $this->render('section/_default/post', [
+                            'id'     => 1,
+                            'image'  => '/images/post1/dummy_760x460.png',
+                            'title'  => $this->translate('post.title', 'post1'),
+                            'topic'  => $this->translate('post.topic', 'post1'),
+                            'date' => $this->translate('post.date', 'post1')
+                        ]);
+                    ?>
+
+                    <!-- blog category end -->
+                </div>
+                <!-- category slier end -->
+                <!-- right side description -->
+                <!-- sidebar start -->
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                        <span class="sidebar_toogle" title="click Here To See Sidebar">
+							<?= $this->translate('button.sidebar.toggle.title') ?>
+						</span>
+                    <div class="ds_sidebar full_width">
+                        <!-- widget start -->
+                        <div class="widget ds_category_posts">
+                            <h3 class="widget_title">
+                                <?= $this->translate('post.sidebar.title', 'blog') ?>
+                            </h3>
+
+                            <?php
+                            // sidebar post 1
+                            $this->addTranslationFile('post2', dirname(__DIR__) . '/post2');
+                            echo $this->render('section/_default/post-sidebar', [
+                                'id'     => 2,
+                                'image'  => '/images/post2/dummy_380x230.png',
+                                'title'  => $this->translate('post.title', 'post2')
+                            ]);
+
+
+
+                            ?>
+                        </div>
+                        <!-- widget end -->
+                        <!-- widget start -->
+                        <div class="widget ds_tag_cloud">
+                            <h3 class="widget_title">
+                                <?= $this->translate('post.sidebar.tags.title', 'blog') ?>
+                            </h3>
+                            <div class="ds_tagcloud  text_widget tagcloud">
+                                <a href="javascript:">
+                                    <?= $this->translate('keyword.makeup.lips') ?>
+                                </a>
+                                <a href="javascript:">
+                                    <?= $this->translate('keyword.makeup.permanent') ?>
+                                </a>
+                                <a href="javascript:">
+                                    <?= $this->translate('keyword.care.lips') ?>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- widget end -->
+                    </div>
+                    <!-- /ds_sidebar end -->
+                </div>
+                <!-- sidebar end -->
+                <!-- right side description -->
+            </div>
+        </div>
+        <!--row end-->
+    </div>
+</div>

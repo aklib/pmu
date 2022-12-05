@@ -1,0 +1,33 @@
+<?php /** @noinspection ALL */
+/**
+ * File post.phtml
+ *
+ * since: 04.12.2022
+ * author: alexej@kisselev.de
+ */
+
+$lang = $this->getLanguage();
+$id = $this->id;
+$title = $this->title ?? '';
+$image = $this->image ?? '';
+
+$slug = str_replace(' ', '_', mb_strtolower($title));
+$url = $this->url('home', ['language' => $lang, 'action' => 'post', 'slug' => $slug], ['query' => ['id' => $id]]);
+?>
+
+
+<div class="ds_widgett full_width">
+    <div class="imgholder">
+        <a href="<?= $url ?>" title="<?= $title ?>">
+            <img src="<?= $image ?>" class="img-responsive" alt="<?= $title ?>">
+        </a>
+    </div>
+    <div class="wttitle">
+        <h4>
+            <a href="<?= $url ?>" rel="bookmark" title="<?= $title ?>">
+                <?= $title ?>
+            </a>
+        </h4>
+    </div>
+</div>
+
