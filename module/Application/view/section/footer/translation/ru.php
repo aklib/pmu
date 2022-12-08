@@ -11,5 +11,5 @@ return [
     'opening.times.title' => 'Время Работы',
     'opening.times.text'  => 'ежедневно',
     'opening.times.time'  => '08:00 - 15:00',
-    'example.title' => 'Галерея работ',
+    'example.title'       => 'Галерея работ',
 ];

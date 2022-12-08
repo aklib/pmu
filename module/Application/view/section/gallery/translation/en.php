@@ -6,9 +6,13 @@
  * author: alexej@kisselev.de
  */
 return [
-    'section.name' => 'OUR SERVICES',
-    'service1.name' => 'eyebrows',
-    'service2.name' => 'lips',
-    'service3.name' => 'eyelids',
-    'service4.name' => 'permanent make-up removal',
+    'gallery.title' => 'Gallery of works',
+
+    'item.sidebar.title'      => 'Popular Topics',
+    'item.sidebar.tags.title' => 'Tags',
+    'item1.title'             => 'Permanent lip make-up',
+    'item1.topic'             => 'Correction of natural asymmetry',
+
+    'item2.title' => 'Permanent eyebrow make-up',
+    'item2.topic' => 'Eyebrow lamination',
 ];

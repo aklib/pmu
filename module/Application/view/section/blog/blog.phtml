@@ -33,21 +33,21 @@ echo $this->render('section/_default/top', [
                     // =========== post 1
                     $this->addTranslationFile('post1', dirname(__DIR__) . '/post1');
                     echo $this->render('section/_default/post-meta', [
-                            'id'     => 1,
-                            'filter' => 'lips',
-                            'image'  => '/images/post1/dummy_380x230.png',
-                            'title'  => $this->translate('post.title', 'post1'),
-                            'topic'  => $this->translate('post.topic', 'post1'),
-                        ]);
+                        'id'     => 1,
+                        'filter' => 'lips',
+                        'image'  => '/images/post1/dummy_380x230.png',
+                        'title'  => $this->translate('post.title', 'post1'),
+                        'topic'  => $this->translate('post.topic', 'post1'),
+                    ]);
                     // =========== post 2
                     $this->addTranslationFile('post2', dirname(__DIR__) . '/post2');
                     echo $this->render('section/_default/post-meta', [
-                            'id'     => 2,
-                            'filter' => 'eyebrows',
-                            'image'  => '/images/post2/dummy_380x230.png',
-                            'title'  => $this->translate('post.title', 'post2'),
-                            'topic'  => $this->translate('post.topic', 'post2'),
-                        ]);
+                        'id'     => 2,
+                        'filter' => 'eyebrows',
+                        'image'  => '/images/post2/dummy_380x230.png',
+                        'title'  => $this->translate('post.title', 'post2'),
+                        'topic'  => $this->translate('post.topic', 'post2'),
+                    ]);
                     // =========== post next
 
 

@@ -26,13 +26,13 @@ $key = $this->key ?? '';
                             <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'index']) ?>">
                                 <?= $this->translate('nav.home') ?>
                             </a>
-                            <?php if($key === 'post'): ?>
+                            <?php if ($key === 'post'): ?>
                                 &laquo;
                                 <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'blog']) ?>">
                                     <?= $this->translate('nav.blog') ?>
                                 </a>
                             <?php endif; ?>
-                            <?php if($key === 'item'): ?>
+                            <?php if ($key === 'item'): ?>
                                 &laquo;
                                 <a href="<?= $this->url('home', ['language' => $lang, 'action' => 'gallery']) ?>">
                                     <?= $this->translate('nav.gallery') ?>

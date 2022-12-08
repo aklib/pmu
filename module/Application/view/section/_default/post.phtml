@@ -49,7 +49,7 @@ $blogUrl = $this->url('home', ['language' => $lang, 'action' => 'blog']);
                     <?php for ($i = 1; true; $i++):
                         $key = 'post.text' . $i;
                         $text = $this->translate($key, 'post' . $id);
-                        if($text === $key){
+                        if ($text === $key) {
                             break;
                         }
                         ?>

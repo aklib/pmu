@@ -6,17 +6,11 @@
  * author: alexej@kisselev.de
  */
 return [
-    'blog.title'             => 'All about permanent make-up',
-    'blog.breadcrumb.text'   => 'My blog',
-    'blog.filter.all'        => 'Show all',
-    'blog.filter.eyebrows'   => 'eyebrows',
-    'blog.filter.eyelids'    => 'eyelids',
-    'blog.filter.lips'       => 'lips',
-    'blog.filter.removal'    => 'permanent make-up removal',
+    'blog.title'              => 'All about permanent make-up',
+    'blog.breadcrumb.text'    => 'My blog',
 
     // default for all posts
-    'post.sidebar.title'       => 'Popular posts',
-    'post.sidebar.tags.title'       => 'Tags',
-
+    'post.sidebar.title'      => 'Popular posts',
+    'post.sidebar.tags.title' => 'Tags',
 
 ];

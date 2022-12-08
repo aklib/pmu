@@ -31,12 +31,12 @@ echo $this->render('section/_default/top', [
                     // =========== post 1
 
                     echo $this->render('section/_default/post', [
-                            'id'     => 2,
-                            'image'  => '/images/post2/dummy_760x460.png',
-                            'title'  => $this->translate('post.title', 'post2'),
-                            'topic'  => $this->translate('post.topic', 'post2'),
-                            'date' => $this->translate('post.date', 'post2')
-                        ]);
+                        'id'    => 2,
+                        'image' => '/images/post2/dummy_760x460.png',
+                        'title' => $this->translate('post.title', 'post2'),
+                        'topic' => $this->translate('post.topic', 'post2'),
+                        'date'  => $this->translate('post.date', 'post2')
+                    ]);
                     ?>
 
                     <!-- blog category end -->
@@ -59,9 +59,9 @@ echo $this->render('section/_default/top', [
                             // sidebar post 1
                             $this->addTranslationFile('post1', dirname(__DIR__) . '/post1');
                             echo $this->render('section/_default/post-sidebar', [
-                                'id'     => 1,
-                                'image'  => '/images/post1/dummy_380x230.png',
-                                'title'  => $this->translate('post.title', 'post1')
+                                'id'    => 1,
+                                'image' => '/images/post1/dummy_380x230.png',
+                                'title' => $this->translate('post.title', 'post1')
                             ]);
 
                             ?>

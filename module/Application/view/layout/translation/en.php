@@ -6,5 +6,5 @@
  * author: alexej@kisselev.de
  */
 return [
-
+    'meta.title' => 'Permanent make-up',
 ];

@@ -8,8 +8,8 @@
 return [
     'gallery.title' => 'Галерея работ',
 
-    'item.sidebar.title'       => 'Популярные темы',
-    'item.sidebar.tags.title'       => 'Теги',
+    'item.sidebar.title'      => 'Популярные темы',
+    'item.sidebar.tags.title' => 'Теги',
 
     'item1.title' => 'Перманентный макияж губ',
     'item1.topic' => 'Исправление природной асимметрии',
