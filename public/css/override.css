@@ -3,3 +3,8 @@
     min-height: 3.6em;
     overflow: hidden;
 }
+
+a.current_page_item {
+    color: #538167 !important;
+    font-weight: 600;
+}

@@ -1,0 +1,133 @@
+<?php /** @noinspection ALL */
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpUndefinedMethodInspection */
+/**
+ * File navigation.phtml
+ *
+ * since: 27.11.2022
+ * author: alexej@kisselev.de
+ */
+
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ *
+ */
+
+$this->addTranslationFile('contact', __DIR__);
+$lang = $this->getLanguage();
+
+//  contact top start
+echo $this->render('section/_default/top', [
+    'title' => $this->translate('section.name', 'contact'),
+    'key'   => 'contact'
+]);
+//  contact top end
+?>
+<div class="ds_wrapper  contact_main">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <p>
+                    <?= $this->translate('section.text', 'contact') ?>
+                </p>
+                <div class="contact_page">
+                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                        <h2 class="block_title">
+                            <?= $this->translate('form.title', 'contact') ?>
+                        </h2>
+                        <div class="break clearfix">
+                        </div>
+                        <div class="contact_form">
+                            <fieldset>
+                                <label>
+                                    <?= $this->translate('form.client.name', 'contact') ?>
+                                </label>
+                                <input type="text" id="uname" name="name" class="name">
+                            </fieldset>
+                            <fieldset>
+                                <label>
+                                    <?= $this->translate('form.client.email', 'contact') ?>
+                                </label>
+                                <input type="email" id="umail" name="email" class="name">
+                            </fieldset>
+                            <fieldset>
+                                <label>
+                                    <?= $this->translate('form.client.subject', 'contact') ?>
+                                </label>
+                                <input type="text" id="subj" name="subject" class="name">
+                            </fieldset>
+                            <fieldset>
+                                <label>
+                                    <?= $this->translate('form.client.message', 'contact') ?>
+                                </label>
+                                <textarea name="your-message" id="msg" cols="20" rows="5" class="textarea">
+                                    </textarea>
+                            </fieldset>
+                            <fieldset>
+                                <input type="submit" value="<?= $this->translate('button.send', 'contact') ?>" name="btn" id="em_submit" class="submit_frm">
+                            </fieldset>
+                            <p id="err">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                        <h2 class="block_title">
+                            <?= $this->translate('map.title', 'contact') ?>
+                        </h2>
+                        <div class="contact_map">
+                            <a href="https://2gis.ru/yaroslavl/geo/3941285329136965" target="_blank">
+                                <img alt="" src="/images/contact/dummy_map.jpg" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                        <h2 class="block_title">
+                            <?= $this->translate('info.extra', 'contact') ?>
+                        </h2>
+                        <div class="block_widget">
+                            <div class="widget widget_text">
+                                <div class="text_widget">
+                                    <p>
+                                        <?= $this->translate('info.text', 'contact') ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="widget widget_text">
+                                <div class="text_widget address_widget">
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-home">
+                                            </i>
+                                            <?= $this->translate('my.name') ?>
+                                            <br/>
+                                            <?= $this->translate('my.address') ?>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone">
+                                            </i>
+                                            <?= $this->translate('phone.number1') ?>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-mobile">
+                                            </i>
+                                            <?= $this->translate('phone.number2') ?>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope">
+                                            </i>
+                                            <?= $this->translate('my.email') ?>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--row end-->
+        </div>
+        <!-- container -->
+    </div>
+</div>
+<div class="divider clearfix">
+</div>

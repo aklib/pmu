@@ -1,0 +1,17 @@
+<?php /** @noinspection PhpUndefinedFieldInspection */
+/**
+ * File ajaxmail.phtml
+ *
+ * since: 08.12.2022
+ * author: alexej@kisselev.de
+ */
+/**
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ *
+ */
+
+$messageKey = $this->messageKey;
+if (empty($messageKey)) {
+    $messageKey = 'mail.error';
+}
+echo $this->translate($messageKey);

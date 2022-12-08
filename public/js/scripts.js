@@ -270,16 +270,17 @@
         var t = $("#umail").val();
         var n = $("#subj").val();
         var r = $("#msg").val();
+        var url = window.location.href.replace('contact', 'ajaxmail');
         $.ajax({
             type: "POST",
-            url: "ajaxmail.php",
+            url: url,
             data: {
                 username: e,
                 useremail: t,
                 useresubject: n,
                 mesg: r
             },
-            success: function(n) {
+            success: function (n) {
                 var i = n.split("#");
                 if (i[0] == "1") {
                     $("#uname").val("");
