@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laminas/laminas-mvc-skeleton',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '847f9e515aa4ab9f2c33c90d51ef7c9b80fe885c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -161,9 +161,9 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-mvc-skeleton' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '847f9e515aa4ab9f2c33c90d51ef7c9b80fe885c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -293,9 +293,9 @@
             ),
         ),
         'symfony/console' => array(
-            'pretty_version' => 'v5.4.15',
-            'version' => '5.4.15.0',
-            'reference' => 'ea59bb0edfaf9f28d18d8791410ee0355f317669',
+            'pretty_version' => 'v5.4.16',
+            'version' => '5.4.16.0',
+            'reference' => '8e9b9c8dfb33af6057c94e1b44846bee700dc5ef',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/console',
             'aliases' => array(),
