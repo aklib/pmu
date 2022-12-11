@@ -103,6 +103,8 @@ class Module
                         }
                     }
                 }
+            } else {
+                header('Location: /' . $locale);
             }
         }
         return $locale;
