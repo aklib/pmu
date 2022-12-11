@@ -1,0 +1,10 @@
+.home_portfolio_categories {
+    max-height: 3.6em;
+    min-height: 3.6em;
+    overflow: hidden;
+}
+
+a.current_page_item {
+    color: #538167 !important;
+    font-weight: 600;
+}
